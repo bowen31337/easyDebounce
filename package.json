@@ -1,19 +1,16 @@
 {
 	"name": "easy-debounce",
 	"version": "1.0.3",
-	"description": "this is a re-created debounce version with less codes in ES6 built with Rollup",
+	"description":
+		"this is a re-created debounce version with less codes in ES6 built with Rollup",
 	"main": "dist/easyDebounce.cjs.js",
 	"module": "dist/easyDebounce.esm.js",
 	"browser": "dist/easyDebounce.umd.js",
-	"keywords": [
-		"debounce",
-		"rollup",
-		"invoke"
-	],
+	"keywords": ["debounce", "rollup", "invoke"],
 	"author": {
-    "name": "Bowen Li",
-    "email": "superdev@outlook.com.au"
-  },
+		"name": "Bowen Li",
+		"email": "superdev@outlook.com.au"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"babel-core": "^6.26.0",
@@ -37,20 +34,18 @@
 		"dev": "rollup -c -w",
 		"test": "node test/test.js | faucet",
 		"pretest": "npm run build",
-		"precommit": "lint-staged"
+		"precommit": "lint-staged",
+		"format":
+			"prettier --trailing-comma es5 --single-quote --no-semi --write 'src/**/*.js'"
 	},
 	"lint-staged": {
 		"*.{js,json,css,md}": [
-			"prettier --write",
+			"prettier prettier --trailing-comma es5 --single-quote --no-semi --write",
 			"git add"
 		],
-		"yarn.lock": [
-			"git rm --cached"
-		]
+		"yarn.lock": ["git rm --cached"]
 	},
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:bowen31337/easyDebounce.git"
@@ -58,5 +53,4 @@
 	"engines": {
 		"node": ">=8.4.0"
 	}
-
 }
