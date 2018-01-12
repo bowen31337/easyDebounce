@@ -1,6 +1,6 @@
 {
 	"name": "easy-debounce",
-	"version": "1.0.3",
+	"version": "1.1.0",
 	"description":
 		"this is a re-created debounce version with less codes in ES6 built with Rollup",
 	"main": "dist/easyDebounce.cjs.js",
@@ -43,7 +43,7 @@
 			"prettier prettier --trailing-comma es5 --single-quote --no-semi --write",
 			"git add"
 		],
-		"yarn.lock": ["git rm --cached"]
+		"yarn.lock": ["git rm --cached", "git add"]
 	},
 	"files": ["dist"],
 	"repository": {

@@ -15,4 +15,13 @@ const debounce = (func, wait = 200, immediate = false) => (...args) => {
 	}
 }
 
+const clear = () => {
+	if (timeout) {
+		clearTimeout(timeout)
+		timeout = null
+	}
+}
+
+debounce.clear = clear
+
 export default debounce
