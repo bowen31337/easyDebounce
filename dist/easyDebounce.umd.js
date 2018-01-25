@@ -8,19 +8,18 @@
 	'use strict'
 	var e = void 0,
 		n = function(n) {
-			var o =
+			var t =
 					arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
-				t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2]
+				o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2]
 			return function() {
-				for (var u = arguments.length, l = Array(u), i = 0; i < u; i++)
-					l[i] = arguments[i]
-				console.log('debounce detected')
-				var r = t && !e
+				for (var u = arguments.length, i = Array(u), l = 0; l < u; l++)
+					i[l] = arguments[l]
+				var r = o && !e
 				clearTimeout(e),
 					(e = setTimeout(function() {
-						;(e = null), t || n.apply(null, l)
-					}, o)),
-					r && n.apply(null, l)
+						;(e = null), o || n.apply(null, i)
+					}, t)),
+					r && n.apply(null, i)
 			}
 		}
 	return (

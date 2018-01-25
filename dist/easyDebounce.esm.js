@@ -1,7 +1,6 @@
 let timeout
 
 const debounce = (func, wait = 200, immediate = false) => (...args) => {
-	console.log('debounce detected')
 	const later = () => {
 		timeout = null
 		if (!immediate) {
